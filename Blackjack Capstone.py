@@ -1,6 +1,7 @@
 from art import *
 import random
 import os
+import time
 
 
 def cls():
@@ -71,6 +72,7 @@ def blackjack():
     outcome = compare(user_score, cpu_score)
     print(f"Your final hand is {user_cards} with a score of: {user_score}\n"
           f"The computer's final hand is {cpu_cards} with a score of {cpu_score}")
+    time.sleep(2)
     print(outcome)
 
 
