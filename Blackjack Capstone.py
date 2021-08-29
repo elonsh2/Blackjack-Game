@@ -4,6 +4,7 @@ import os
 
 
 def cls():
+    """clears screen"""
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
@@ -15,6 +16,7 @@ def deal_card():
 
 
 def calculate_score(list_of_cards):
+    """calculating the value of the cards and checks for Blackjack"""
     if sum(list_of_cards) == 21 and len(list_of_cards) == 2:
         return 0
     if 11 in list_of_cards and sum(list_of_cards) > 21:
@@ -24,6 +26,7 @@ def calculate_score(list_of_cards):
 
 
 def compare(user_score, computer_score):
+    """comparing the hands of the players"""
     if user_score == computer_score:
         return 'Draw'
     elif computer_score == 0:
