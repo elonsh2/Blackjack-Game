@@ -69,6 +69,8 @@ def blackjack():
     while cpu_score < 17 and cpu_score != 0:
         cpu_cards.append(deal_card())
         cpu_score = calculate_score(cpu_cards)
+        print(f"Computer's hand: {cpu_cards}")
+        time.sleep(1.5)
     outcome = compare(user_score, cpu_score)
     print(f"Your final hand is {user_cards} with a score of: {user_score}\n"
           f"The computer's final hand is {cpu_cards} with a score of {cpu_score}")
